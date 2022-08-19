@@ -11,7 +11,7 @@ const counterSlice = createSlice({
 			state.counter++;
 		},
 		increase(state, action) {
-			state.counter = state.counter + action.amount;
+			state.counter = state.counter + action.payload;
 		},
 		decrement(state) {
 			state.counter--;
@@ -31,4 +31,5 @@ const counterSubscriber = () => {
 	console.log(latestState);
 };
 
+export const counterActions = counterSlice.actions;
 export default store;
